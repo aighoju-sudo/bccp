@@ -49,6 +49,17 @@ app.use(session({
   }
 }));
 
+const defaultIconPng = Buffer.from(
+  'iVBORw0KGgoAAAANSUhEUgAAAAEAAAAB4L' +
+  'qAAAAA1J0p0AAAAAXNSR0IAr3' +
+  'U1F6AAAAAElFTkSuQmCC', 'base64'
+);
+
+app.get(['/favicon.ico', '/apple-touch-icon.png', '/apple-touch-icon-precomposed.png'], (req, res) => {
+  res.setHeader('Content-Type', 'image/png');
+  res.send(defaultIconPng);
+});
+
 function sendHomePage(req, res) {
   res.sendFile(path.join(publicDir, 'home.html'));
 }
