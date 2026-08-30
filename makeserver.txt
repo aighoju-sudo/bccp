@@ -1,0 +1,24 @@
+nodejs 설치
+<powershell>
+node -v
+
+
+https://www.youtube.com/watch?v=n-Ae22bpNWU&list=PLfLgtT94nNq1qmsvIii_CAxFlD7tvB5NE&index=5
+
+
+=======================================npm install=======================================
+에러 메시지 'npm : 이 시스템에서 스크립트를 실행할 수 없으므로 ...' 뜰 경우 권한이 없는거라 풀어줘야함
+-> window powershell 관리자 권한 실행 -> Set-ExecutionPolicy RemoteSigned -> Y
+=========================================================================================
+<terminal>
+node server.js
+
+
+=====================================nodemon 보안오류=====================================
+powershell 관리자권한 실행
+executionPolicy   -> Restricted 확인
+set-executionpolicy unrestric
+=========================================================================================
+
+<terminal>
+nodemon server.js
