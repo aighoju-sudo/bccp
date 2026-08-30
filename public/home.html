@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 18px;
+        font-family: Arial, sans-serif;
+        background: #f5f7fb;
+      }
+
+      .button-group {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        align-items: center;
+      }
+
+      button {
+        width: min(220px, 72vw);
+        padding: 14px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      }
+
+      #status {
+        font-size: 14px;
+        color: #2d3748;
+      }
+
+      #status strong {
+        color: #1d4ed8;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="button-group">
+      <div id="status">Checking session...</div>
+      <button id="loginButton" onclick="window.location.href='/login'">login</button>
+      <button id="signupButton" onclick="window.location.href='/signup'">signup</button>
+      <button id="chatButton" onclick="window.location.href='/chat'">Go to Chat</button>
+      <button id="logoutButton" type="button">logout</button>
+    </div>
+
+    <script src="./home.js"></script>
+  </body>
+</html>

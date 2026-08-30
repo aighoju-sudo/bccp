@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #f5f7fb;
+        font-family: Arial, sans-serif;
+      }
+
+      .card {
+        width: min(360px, 90vw);
+        background: white;
+        border-radius: 12px;
+        padding: 24px;
+      }
+
+      h2 {
+        margin-top: 0;
+        text-align: center;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      input {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+        border: 1px solid #d9e2ec;
+        border-radius: 8px;
+      }
+
+      button {
+        padding: 12px;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        background: #4CAF50;
+        color: white;
+        cursor: pointer;
+      }
+
+      .link {
+        margin-top: 10px;
+        text-align: center;
+        font-size: 14px;
+      }
+
+      .error {
+        color: #c0392b;
+        min-height: 20px;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h2>Sign Up</h2>
+      <form id="signupForm">
+        <input id="username" name="username" type="text" placeholder="Username" required />
+        <input id="password" name="password" type="password" placeholder="Password" required />
+        <div id="error" class="error"></div>
+        <button type="submit">Create Account</button>
+      </form>
+      <div class="link">
+        <a href="/login">Already have an account?</a>
+      </div>
+    </div>
+
+    <script src="./signup.js"></script>
+  </body>
+</html>
